@@ -2895,7 +2895,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         back9_adjusted: z.ZodNullable<z.ZodNumber>;
         back9_course_rating: z.ZodNullable<z.ZodNumber>;
         back9_slope_rating: z.ZodNullable<z.ZodNumber>;
-        course_id: z.ZodOptional<z.ZodString>;
+        course_id: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         course_name: z.ZodOptional<z.ZodString>;
         tee_name: z.ZodOptional<z.ZodString>;
         course_rating: z.ZodNumber;
@@ -3058,11 +3058,11 @@ declare const schemaScoresResponse: z.ZodObject<{
             up_and_downs_total: number;
             last_stats_update_date?: string | Date | null | undefined;
         }>>>;
-        status: z.ZodEffects<z.ZodEnum<["Validated", "UnderReview"]>, "VALIDATED" | "UNDER_REVIEW", "Validated" | "UnderReview">;
+        status: z.ZodEffects<z.ZodEnum<["Validated", "UnderReview", "Temporary"]>, "VALIDATED" | "UNDER_REVIEW" | "TEMPORARY", "Validated" | "UnderReview" | "Temporary">;
         unadjusted_differential: z.ZodNumber;
         used: z.ZodEffects<z.ZodUnion<[z.ZodBoolean, z.ZodLiteral<"true">, z.ZodLiteral<"false">, z.ZodNull]>, boolean, boolean | "true" | "false" | null>;
     }, "strip", z.ZodTypeAny, {
-        status: "VALIDATED" | "UNDER_REVIEW";
+        status: "VALIDATED" | "UNDER_REVIEW" | "TEMPORARY";
         id: number;
         gender: "M" | "F";
         number_of_holes: number;
@@ -3118,7 +3118,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         season_start_date_at: string | null;
         unadjusted_differential: number;
         used: boolean;
-        course_id?: string | undefined;
+        course_id?: string | null | undefined;
         tee_name?: string | undefined;
         played_at?: Date | undefined;
         course_name?: string | undefined;
@@ -3154,7 +3154,7 @@ declare const schemaScoresResponse: z.ZodObject<{
             last_stats_update_date?: Date | undefined;
         } | null | undefined;
     }, {
-        status: "Validated" | "UnderReview";
+        status: "Validated" | "UnderReview" | "Temporary";
         id: number;
         gender: "M" | "F";
         number_of_holes: number;
@@ -3210,7 +3210,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         season_start_date_at: string;
         unadjusted_differential: number;
         used: boolean | "true" | "false" | null;
-        course_id?: string | undefined;
+        course_id?: string | null | undefined;
         tee_name?: string | undefined;
         played_at?: string | Date | null | undefined;
         course_name?: string | undefined;
@@ -3249,7 +3249,7 @@ declare const schemaScoresResponse: z.ZodObject<{
     total_count: z.ZodDefault<z.ZodEffects<z.ZodUnion<[z.ZodNumber, z.ZodLiteral<"-">]>, number | null, number | "-">>;
 }, "strip", z.ZodTypeAny, {
     scores: {
-        status: "VALIDATED" | "UNDER_REVIEW";
+        status: "VALIDATED" | "UNDER_REVIEW" | "TEMPORARY";
         id: number;
         gender: "M" | "F";
         number_of_holes: number;
@@ -3305,7 +3305,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         season_start_date_at: string | null;
         unadjusted_differential: number;
         used: boolean;
-        course_id?: string | undefined;
+        course_id?: string | null | undefined;
         tee_name?: string | undefined;
         played_at?: Date | undefined;
         course_name?: string | undefined;
@@ -3347,7 +3347,7 @@ declare const schemaScoresResponse: z.ZodObject<{
     total_count: number | null;
 }, {
     scores: {
-        status: "Validated" | "UnderReview";
+        status: "Validated" | "UnderReview" | "Temporary";
         id: number;
         gender: "M" | "F";
         number_of_holes: number;
@@ -3403,7 +3403,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         season_start_date_at: string;
         unadjusted_differential: number;
         used: boolean | "true" | "false" | null;
-        course_id?: string | undefined;
+        course_id?: string | null | undefined;
         tee_name?: string | undefined;
         played_at?: string | Date | null | undefined;
         course_name?: string | undefined;

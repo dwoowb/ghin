@@ -1498,13 +1498,14 @@ var scoreTypesMap = {
 var schemaScoreTypeWithTransform = schemaRawScoreTypes.transform(
   (value) => scoreTypesMap[value]
 );
-var scoreStatuses = ["VALIDATED", "UNDER_REVIEW"];
+var scoreStatuses = ["VALIDATED", "UNDER_REVIEW", "TEMPORARY"];
 var schemaScoreStatus = import_zod30.z.enum(scoreStatuses);
-var rawScoreStatuses = ["Validated", "UnderReview"];
+var rawScoreStatuses = ["Validated", "UnderReview", "Temporary"];
 var schemaRawScoreStatus = import_zod30.z.enum(rawScoreStatuses);
 var scoreStatusesMap = {
   Validated: "VALIDATED",
-  UnderReview: "UNDER_REVIEW"
+  UnderReview: "UNDER_REVIEW",
+  Temporary: "TEMPORARY"
 };
 var schemaScoreStatusWithTransform = schemaRawScoreStatus.transform(
   (value) => scoreStatusesMap[value]
@@ -1515,7 +1516,7 @@ var schemaScore = import_zod30.z.object({
   back9_adjusted: number.nullable(),
   back9_course_rating: float.nullable(),
   back9_slope_rating: float.nullable(),
-  course_id: string.optional(),
+  course_id: string.nullable().optional(),
   course_name: string.optional(),
   tee_name: string.optional(),
   course_rating: float,
