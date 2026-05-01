@@ -2,17 +2,15 @@
 
 ⛳ An unofficial wrapper for the GHIN api
 
-[![npm version](https://img.shields.io/npm/v/@spicygolf/ghin)](https://www.npmjs.com/package/@spicygolf/ghin)
-![Downloads](https://img.shields.io/github/downloads/boorad/ghin/total)
-[![codecov](https://codecov.io/gh/boorad/ghin/branch/main/graph/badge.svg)](https://codecov.io/gh/boorad/ghin)
-[![Issues](https://img.shields.io/github/issues/boorad/ghin)](https://github.com/boorad/ghin/issues)
-[![License](https://img.shields.io/github/license/boorad/ghin)](https://github.com/boorad/ghin/blob/main/LICENSE)
-
 This TypeScript library provides a convenient and easy-to-use API wrapper for accessing the Golfer Handicap Index Network (GHIN) api unofficially. It allows you to interact with GHIN data, retrieve golfer handicaps, scores, and perform various operations related to golf handicaps.
 
 ## About This Fork
 
-This is a fork of [n8io/ghin](https://github.com/n8io/ghin), originally created by Nate Clark. This fork includes additional features and improvements.
+This is a fork of a fork — forked from [boorad/ghin](https://github.com/boorad/ghin) (Brad Anderson), which was itself forked from [n8io/ghin](https://github.com/n8io/ghin) (Nate Clark).
+
+### Changes from upstream
+
+- `Score` type now includes `course_id` and `course_name` fields returned by the GHIN API but previously omitted from the schema
 
 ## Features
 

@@ -52,6 +52,8 @@ const schemaScore = z.object({
   back9_adjusted: number.nullable(),
   back9_course_rating: float.nullable(),
   back9_slope_rating: float.nullable(),
+  course_id: string.optional(),
+  course_name: string.optional(),
   course_rating: float,
   differential: float,
   edited: boolean,
