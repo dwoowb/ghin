@@ -2897,6 +2897,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         back9_slope_rating: z.ZodNullable<z.ZodNumber>;
         course_id: z.ZodOptional<z.ZodString>;
         course_name: z.ZodOptional<z.ZodString>;
+        tee_name: z.ZodOptional<z.ZodString>;
         course_rating: z.ZodNumber;
         differential: z.ZodNumber;
         edited: z.ZodEffects<z.ZodUnion<[z.ZodBoolean, z.ZodLiteral<"true">, z.ZodLiteral<"false">, z.ZodNull]>, boolean, boolean | "true" | "false" | null>;
@@ -3118,6 +3119,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         unadjusted_differential: number;
         used: boolean;
         course_id?: string | undefined;
+        tee_name?: string | undefined;
         played_at?: Date | undefined;
         course_name?: string | undefined;
         penalty?: boolean | undefined;
@@ -3209,6 +3211,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         unadjusted_differential: number;
         used: boolean | "true" | "false" | null;
         course_id?: string | undefined;
+        tee_name?: string | undefined;
         played_at?: string | Date | null | undefined;
         course_name?: string | undefined;
         penalty?: boolean | "true" | "false" | null | undefined;
@@ -3303,6 +3306,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         unadjusted_differential: number;
         used: boolean;
         course_id?: string | undefined;
+        tee_name?: string | undefined;
         played_at?: Date | undefined;
         course_name?: string | undefined;
         penalty?: boolean | undefined;
@@ -3400,6 +3404,7 @@ declare const schemaScoresResponse: z.ZodObject<{
         unadjusted_differential: number;
         used: boolean | "true" | "false" | null;
         course_id?: string | undefined;
+        tee_name?: string | undefined;
         played_at?: string | Date | null | undefined;
         course_name?: string | undefined;
         penalty?: boolean | "true" | "false" | null | undefined;

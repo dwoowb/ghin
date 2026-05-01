@@ -10,7 +10,7 @@ This is a fork of a fork — forked from [boorad/ghin](https://github.com/boorad
 
 ### Changes from upstream
 
-- `Score` type now includes `course_id` and `course_name` fields returned by the GHIN API but previously omitted from the schema
+- `Score` type now includes `course_id`, `course_name`, and `tee_name` fields returned by the GHIN API but previously omitted from the schema
 
 ## Features
 

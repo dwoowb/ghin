@@ -1421,6 +1421,7 @@ var schemaScore = z30.object({
   back9_slope_rating: float.nullable(),
   course_id: string.optional(),
   course_name: string.optional(),
+  tee_name: string.optional(),
   course_rating: float,
   differential: float,
   edited: boolean,
