@@ -1518,6 +1518,7 @@ var schemaScore = import_zod30.z.object({
   back9_slope_rating: float.nullable(),
   course_id: string.nullable().optional(),
   course_name: string.optional(),
+  facility_name: string.optional(),
   tee_name: string.optional(),
   course_rating: float,
   differential: float,
