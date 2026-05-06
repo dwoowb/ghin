@@ -767,7 +767,7 @@ var schemaCourse = z10.object({
   CourseID: number,
   CourseName: string,
   CourseStatus: schemaStatus,
-  Email: string.email().nullable(),
+  Email: z10.string().nullable().optional(),
   EntCountryCode: number.nullable(),
   EntStateCode: number.nullable(),
   FacilityID: number,

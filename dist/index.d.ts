@@ -266,7 +266,7 @@ declare const schemaCourseSearchResponse: z.ZodObject<{
         CourseID: z.ZodNumber;
         CourseName: z.ZodString;
         CourseStatus: z.ZodPipeline<z.ZodEffects<z.ZodString, string, string>, z.ZodEnum<["ACTIVE", "INACTIVE"]>>;
-        Email: z.ZodNullable<z.ZodString>;
+        Email: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         EntCountryCode: z.ZodNullable<z.ZodNumber>;
         EntStateCode: z.ZodNullable<z.ZodNumber>;
         FacilityID: z.ZodNumber;
@@ -289,7 +289,7 @@ declare const schemaCourseSearchResponse: z.ZodObject<{
         CourseID: z.ZodNumber;
         CourseName: z.ZodString;
         CourseStatus: z.ZodPipeline<z.ZodEffects<z.ZodString, string, string>, z.ZodEnum<["ACTIVE", "INACTIVE"]>>;
-        Email: z.ZodNullable<z.ZodString>;
+        Email: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         EntCountryCode: z.ZodNullable<z.ZodNumber>;
         EntStateCode: z.ZodNullable<z.ZodNumber>;
         FacilityID: z.ZodNumber;
@@ -312,7 +312,7 @@ declare const schemaCourseSearchResponse: z.ZodObject<{
         CourseID: z.ZodNumber;
         CourseName: z.ZodString;
         CourseStatus: z.ZodPipeline<z.ZodEffects<z.ZodString, string, string>, z.ZodEnum<["ACTIVE", "INACTIVE"]>>;
-        Email: z.ZodNullable<z.ZodString>;
+        Email: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         EntCountryCode: z.ZodNullable<z.ZodNumber>;
         EntStateCode: z.ZodNullable<z.ZodNumber>;
         FacilityID: z.ZodNumber;
@@ -337,7 +337,7 @@ declare const schemaCourseSearchResponse: z.ZodObject<{
         CourseID: z.ZodNumber;
         CourseName: z.ZodString;
         CourseStatus: z.ZodPipeline<z.ZodEffects<z.ZodString, string, string>, z.ZodEnum<["ACTIVE", "INACTIVE"]>>;
-        Email: z.ZodNullable<z.ZodString>;
+        Email: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         EntCountryCode: z.ZodNullable<z.ZodNumber>;
         EntStateCode: z.ZodNullable<z.ZodNumber>;
         FacilityID: z.ZodNumber;
@@ -362,7 +362,7 @@ declare const schemaCourseSearchResponse: z.ZodObject<{
         CourseID: z.ZodNumber;
         CourseName: z.ZodString;
         CourseStatus: z.ZodPipeline<z.ZodEffects<z.ZodString, string, string>, z.ZodEnum<["ACTIVE", "INACTIVE"]>>;
-        Email: z.ZodNullable<z.ZodString>;
+        Email: z.ZodOptional<z.ZodNullable<z.ZodString>>;
         EntCountryCode: z.ZodNullable<z.ZodNumber>;
         EntStateCode: z.ZodNullable<z.ZodNumber>;
         FacilityID: z.ZodNumber;

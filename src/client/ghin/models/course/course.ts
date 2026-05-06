@@ -12,7 +12,7 @@ const schemaCourse = z.object({
   CourseID: number,
   CourseName: string,
   CourseStatus: schemaStatus,
-  Email: string.email().nullable(),
+  Email: z.string().nullable().optional(),
   EntCountryCode: number.nullable(),
   EntStateCode: number.nullable(),
   FacilityID: number,
